@@ -1,0 +1,75 @@
+.reminder-wrapper {
+    position: absolute;
+    width: 38.5%;
+    max-height: 0%;
+    height: 57.5%;
+    padding: 0px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    transition: max-height 0.5s;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+.reminder-wrapper.active {
+    max-height: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 5px;
+}
+.reminder-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: black;
+    border-bottom: 1px solid lightgrey;
+}
+.reminder-header .close {
+    cursor: pointer;
+}
+.reminders {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+}
+.reminders .reminder {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 1%;
+}
+.reminders .reminder .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reminders .reminder .title .reminder-title {
+    margin-left: 4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* white-space: wrap; */
+    word-wrap: break-word;
+}
+.reminders .reminder .title .reminder-link {
+    margin-left: 5%;
+    margin-right: 4%;
+    align-items: right;
+    width: 35%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reminders .reminder .title .delete {
+    cursor: pointer;
+}
